@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oreui_flutter/oreui_flutter.dart';
 import 'package:charactfolio_/themes/app_themes.dart';
 import 'package:charactfolio_/screens/homescreen.dart';
 
@@ -11,6 +12,7 @@ class CharactfolioApp_ extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: CharactfolioColorsApp.charactfolioColor,
       home: HomeScreen(),
     );
