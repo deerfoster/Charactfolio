@@ -1,7 +1,5 @@
-import 'package:charactfolio_/themes/app_themes.dart';
 import 'package:flutter/material.dart';
-import 'package:pixelarticons/pixelarticons.dart';
-import 'package:charactfolio_/widgets/buttons.dart';
+import 'package:charactfolio_/exports/app_exports.dart';
 
 class HomeScreen extends StatefulWidget{
   const HomeScreen({super.key});
@@ -45,8 +43,73 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: 
-      const CharactfolioButton(),
+      body:
+      Center(
+        child:
+        Column(
+          children: [
+            const SizedBox(
+              height: 50.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/menuTitle.png',
+                  fit: BoxFit.contain,
+                  width: 300.0,
+                  filterQuality: FilterQuality.none,
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset(
+                      'assets/images/xari.png',
+                      fit: BoxFit.contain,
+                      width: 150.0,
+                      filterQuality: FilterQuality.none,
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  width: 20.0,
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CharactfolioCardAsset1(
+                        ch_image: 'assets/images/cardBackground1.png',
+                        ch_title: 'prueba',
+                        ch_description: 'Hi there! '
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      // CharactfolioButton(
+                      //   ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
+                      //   ch_imageBtton_pressed: 'assets/images/bttonBackOn.png', 
+                      //   ch_labelBtton: 'texto boton', 
+                      //   onPressed: (){})
+                    ],
+                  ),
+              ],
+            ),
+          ],
+        ),
+      )
     );
   }
 }
