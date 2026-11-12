@@ -1,30 +1,64 @@
-import 'package:charactfolio_/themes/app_themes.dart';
 import 'package:flutter/material.dart';
+import 'package:charactfolio_/exports/app_exports.dart';
 
 class CharactfolioButton  extends StatefulWidget{
-  const CharactfolioButton ({super.key});
+  final String ch_imageBtton_normal;
+  final String ch_imageBtton_pressed;
+  final String ch_labelBtton;
+  final VoidCallback onPressed;
+
+  const CharactfolioButton({
+    super.key,
+    required this.ch_imageBtton_normal,
+    required this.ch_imageBtton_pressed,
+    required this.ch_labelBtton,
+    required this.onPressed,
+  });
 
   @override
   State<CharactfolioButton> createState() => _CharactfolioButtonState();
 }
-class _CharactfolioButtonState extends State<CharactfolioButton>{
+
+class _CharactfolioButtonState extends State<CharactfolioButton> {
+
+  bool _bttonOnPressed = false;
+
   @override
   Widget build(BuildContext context){
-    final ButtonStyle style = ElevatedButton.styleFrom(
-      textStyle: const TextStyle(fontSize: 20),
-      elevation: 100.0
-    );
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          ElevatedButton(
-            style: style,
-            onPressed: null,
-            child: const Text('Un boton'),
-            )
+    return GestureDetector(
+
+      onTapDown: (_) {
+        setState(() {
+          _bttonOnPressed = true;
+        });
+      },
+      onTapUp: (_) {
+        setState(() {
+          _bttonOnPressed = false;
+        });
+        widget.onPressed();
+      },
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Image.asset(
+            _bttonOnPressed ? widget.ch_imageBtton_pressed : widget.ch_imageBtton_normal,
+            width: 220,
+            height: 60,
+            fit: BoxFit.contain,
+          ),
+          Padding(padding: EdgeInsets.only(top: _bttonOnPressed? 4.0 : 0.0),
+          child: Text(
+            widget.ch_labelBtton,
+            style: const TextStyle(
+              color: CharactfolioColorsApp.color6,
+              fontSize: 18,
+              fontWeight: FontWeight.bold
+            ), 
+          ),
+          )
         ],
-      ),
+      )
     );
   }
 }
