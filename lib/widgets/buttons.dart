@@ -4,14 +4,18 @@ import 'package:charactfolio_/exports/app_exports.dart';
 class CharactfolioButton  extends StatefulWidget{
   final String ch_imageBtton_normal;
   final String ch_imageBtton_pressed;
-  final String ch_labelBtton;
+  final String? ch_labelBtton;
+  final double? width;
+  final double? height;
   final VoidCallback onPressed;
 
   const CharactfolioButton({
     super.key,
     required this.ch_imageBtton_normal,
     required this.ch_imageBtton_pressed,
-    required this.ch_labelBtton,
+    this.ch_labelBtton,
+    this.width,
+    this.height,
     required this.onPressed,
   });
 
@@ -43,13 +47,14 @@ class _CharactfolioButtonState extends State<CharactfolioButton> {
         children: [
           Image.asset(
             _bttonOnPressed ? widget.ch_imageBtton_pressed : widget.ch_imageBtton_normal,
-            width: 220,
-            height: 60,
+            width: widget.width,
+            height: widget.height,
             fit: BoxFit.contain,
           ),
+          if (widget.ch_labelBtton != null)
           Padding(padding: EdgeInsets.only(top: _bttonOnPressed? 4.0 : 0.0),
           child: Text(
-            widget.ch_labelBtton,
+            widget.ch_labelBtton!,
             style: const TextStyle(
               color: CharactfolioColorsApp.color6,
               fontSize: 18,
