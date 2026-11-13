@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 abstract class CharactfolioColorsApp(){
-  static const Color dashboard_color = Color(0xFFEDE3C8);
+  static const Color dashboardColor = Color(0xFFEDE3C8);
   static const Color color2 = Color(0XFFC1A0AC);
   static const Color color3 = Color(0XFFF0D9E4);
   static const Color color4 = Color(0XFF806C79);
@@ -10,9 +10,9 @@ abstract class CharactfolioColorsApp(){
 
   static final ThemeData charactfolioColor = ThemeData(
     fontFamily: 'fields-of-mistria',
-    scaffoldBackgroundColor: dashboard_color,
+    scaffoldBackgroundColor: dashboardColor,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: dashboard_color,
+      seedColor: dashboardColor,
       primary: color4,
       secondary: color3,
       surface: color2
