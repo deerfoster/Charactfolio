@@ -1,3 +1,4 @@
+import 'package:charactfolio_/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 
 class CharactfolioCardAsset1 extends StatelessWidget {
@@ -24,7 +25,34 @@ class CharactfolioCardAsset1 extends StatelessWidget {
         fit: BoxFit.fill,
         filterQuality: FilterQuality.none,
         ),
-        Text(ch_description)
+        Positioned(
+          top: 35,
+          bottom: 35,
+          left: 30,
+          right: 24,
+        child: 
+          Scrollbar(
+            thumbVisibility: true,
+            thickness: 6.0,
+            radius: Radius.zero,
+          child: SingleChildScrollView(
+            child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(ch_description,
+                textAlign: TextAlign.left,
+                softWrap: true,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    height: 1.4,
+                    color: CharactfolioColorsApp.color6
+                  )
+                )
+              ],
+            ),
+          )
+          )
+        )
       ],
     );
   }

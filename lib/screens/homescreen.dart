@@ -17,11 +17,20 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 2.5,
         shadowColor: CharactfolioColorsApp.color6,
         title: SizedBox(
-          height: 30.0,
-          child: Image.asset('assets/images/Logo.png'),
+          child: 
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/images/Logo.png',
+                width: 110.0,
+                height: 100.0,
+                ),
+            ],
+          ),
         ),
         leading:
-        Padding(padding: EdgeInsetsGeometry.symmetric(horizontal: 3.0, vertical: 3.0),
+        Padding(padding: EdgeInsetsGeometry.symmetric(horizontal: 2.0, vertical: 3.0),
         child: IconButton(icon: const Icon(Pixel.menu), onPressed: (){})
         ),
         actionsPadding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 3.0),
@@ -44,71 +53,70 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body:
-      Center(
-        child:
-        Column(
-          children: [
-            const SizedBox(
-              height: 50.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/menuTitle.png',
-                  fit: BoxFit.contain,
-                  width: 300.0,
-                  filterQuality: FilterQuality.none,
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 50.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.min,
+      Column(
+        children: [
+          const SizedBox(
+            height: 30.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/welcomeTitle.png',
+                fit: BoxFit.contain,
+                width: 300.0,
+                filterQuality: FilterQuality.none,
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 30.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset(
+                    'assets/images/xari.png',
+                    fit: BoxFit.contain,
+                    width: 150.0,
+                    filterQuality: FilterQuality.none,
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  )
+                ],
+              ),
+              const SizedBox(
+                width: 20.0,
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
                   children: [
-                    Image.asset(
-                      'assets/images/xari.png',
-                      fit: BoxFit.contain,
-                      width: 150.0,
-                      filterQuality: FilterQuality.none,
+                    CharactfolioCardAsset1(
+                      ch_image: 'assets/images/cardBackground1.png',
+                      ch_title: 'prueba',
+                      ch_description: 'Hi there! Charactfolio is an app made with flutter & dart, works as a portfolio inspired by the game "Fields Of Mistria" a farming sim video game developed and published by NPC studio.'
                     ),
-                    const SizedBox(
-                      height: 10.0,
-                    )
+                    SizedBox(
+                      height: 20.0,
+                    ),
                   ],
                 ),
-                const SizedBox(
-                  width: 20.0,
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                    children: [
-                      CharactfolioCardAsset1(
-                        ch_image: 'assets/images/cardBackground1.png',
-                        ch_title: 'prueba',
-                        ch_description: 'Hi there! '
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      // CharactfolioButton(
-                      //   ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
-                      //   ch_imageBtton_pressed: 'assets/images/bttonBackOn.png', 
-                      //   ch_labelBtton: 'texto boton', 
-                      //   onPressed: (){})
-                    ],
-                  ),
-              ],
+            ],
+          ),
+            const SizedBox(
+              height: 25.0,
             ),
-          ],
-        ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: CharactfolioMenu(),
+            )
+        ],
       )
     );
   }

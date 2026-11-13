@@ -1,3 +1,4 @@
+import 'package:charactfolio_/exports/app_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:oreui_flutter/oreui_flutter.dart';
 import 'package:charactfolio_/themes/app_themes.dart';
@@ -15,6 +16,8 @@ class CharactfolioApp_ extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       theme: CharactfolioColorsApp.charactfolioColor,
       home: HomeScreen(),
+      // initialRoute: CharactfolioRoutes.home,
+      // routes: CharactfolioRoutes.routes,
     );
   }
 }
