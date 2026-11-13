@@ -37,7 +37,9 @@ class CharactfolioMenu extends StatelessWidget{
                 ch_labelBtton: 'About me',
                 width: 230.0,
                 height: 60.0, 
-                onPressed: (){}
+                onPressed: (){
+                  Navigator.pushNamed(context, CharactfolioRoutes.aboutMe);
+                }
               ),
               SizedBox(
                 height: 1.5,

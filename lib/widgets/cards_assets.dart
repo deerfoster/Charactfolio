@@ -1,17 +1,21 @@
-import 'package:charactfolio_/themes/app_themes.dart';
 import 'package:flutter/material.dart';
+import 'package:charactfolio_/exports/app_exports.dart';
 
 class CharactfolioCardAsset1 extends StatelessWidget {
 
   final String ch_image;
-  final String ch_title;
+  final String? ch_title;
   final String ch_description;
+  final double? width;
+  final double? height;
 
   const CharactfolioCardAsset1({
     super.key,
     required this.ch_image,
-    required this.ch_title,
+    this.ch_title,
     required this.ch_description,
+    this.width = 200,
+    this.height = 250,
   });
 
   @override
@@ -20,8 +24,8 @@ class CharactfolioCardAsset1 extends StatelessWidget {
       alignment:Alignment.center,
       children: [
         Image.asset(ch_image,
-        width: 200,
-        height: 250,
+        width: width,
+        height: height,
         fit: BoxFit.fill,
         filterQuality: FilterQuality.none,
         ),

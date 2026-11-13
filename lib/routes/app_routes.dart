@@ -9,7 +9,7 @@ class CharactfolioRoutes {
 
   static Map<String, Widget Function(BuildContext)> routes= {
     home: (BuildContext context) => const HomeScreen(),
-    // aboutMe: (BuildContext context) => const AboutMeScreen(),
+    aboutMe: (BuildContext context) => const AboutMeScreen(),
     // projects: (BuildContext context) => const ProjectScreen(),
     // developer: (BuildContext context) => const DeveloperScreen(),
   };

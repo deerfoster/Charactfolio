@@ -12,3 +12,4 @@ export 'package:charactfolio_/screens/about_me.dart';
 export 'package:charactfolio_/screens/projects.dart';
 
 export 'package:pixelarticons/pixelarticons.dart';
+import 'package:url_launcher/url_launcher.dart';
