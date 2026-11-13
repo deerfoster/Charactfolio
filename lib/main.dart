@@ -15,9 +15,8 @@ class CharactfolioApp_ extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: CharactfolioColorsApp.charactfolioColor,
-      home: HomeScreen(),
-      // initialRoute: CharactfolioRoutes.home,
-      // routes: CharactfolioRoutes.routes,
+      initialRoute: CharactfolioRoutes.home,
+      routes: CharactfolioRoutes.routes,
     );
   }
 }

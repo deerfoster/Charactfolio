@@ -34,7 +34,9 @@ class CharactfolioMenu extends StatelessWidget{
               CharactfolioButton(
                 ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
                 ch_imageBtton_pressed: 'assets/images/bttonBackOn.png', 
-                ch_labelBtton: 'About me', 
+                ch_labelBtton: 'About me',
+                width: 230.0,
+                height: 60.0, 
                 onPressed: (){}
               ),
               SizedBox(
@@ -43,7 +45,9 @@ class CharactfolioMenu extends StatelessWidget{
               CharactfolioButton(
                 ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
                 ch_imageBtton_pressed: 'assets/images/bttonBackOn.png', 
-                ch_labelBtton: 'Projects', 
+                ch_labelBtton: 'Projects',
+                width: 230.0,
+                height: 60.0,  
                 onPressed: (){}
               ),
               SizedBox(
@@ -52,7 +56,9 @@ class CharactfolioMenu extends StatelessWidget{
               CharactfolioButton(
                 ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
                 ch_imageBtton_pressed: 'assets/images/bttonBackOn.png', 
-                ch_labelBtton: 'Socials', 
+                ch_labelBtton: 'Socials',
+                width: 230.0,
+                height: 60.0,  
                 onPressed: (){}
               ),
               SizedBox(
