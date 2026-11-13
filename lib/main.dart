@@ -1,8 +1,5 @@
-import 'package:charactfolio_/exports/app_exports.dart';
 import 'package:flutter/material.dart';
-import 'package:oreui_flutter/oreui_flutter.dart';
-import 'package:charactfolio_/themes/app_themes.dart';
-import 'package:charactfolio_/screens/homescreen.dart';
+import 'package:charactfolio_/exports/app_exports.dart';
 
 void main(){
   runApp(const CharactfolioApp_());
