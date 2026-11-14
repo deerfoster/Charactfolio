@@ -27,23 +27,75 @@ class CharactfolioAppBar extends StatelessWidget implements PreferredSizeWidget{
         ),
         leading:
         Padding(padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 3.0),
-        child: CharactfolioButton(
+        child: 
+        CharactfolioButton(
           ch_imageBtton_normal: 'assets/images/landingAppBarBttonOff.png', 
           ch_imageBtton_pressed: 'assets/images/landingAppBarBttonOn.png', 
-          ch_labelBtton: '', 
-          onPressed: (){})
-        ),
-        actionsPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
+          onPressed: (){
+            showMenu<String>(
+          context: context,
+          position: RelativeRect.fromLTRB(16.0, 75.0, 150.0, 0.0),
+          shape:
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+              side: const BorderSide(
+                color: CharactfolioColorsApp.color5,
+                width: 6.0
+              )
+            ),
+          items: 
+          const [
+            const PopupMenuItem<String>(
+              value: CharactfolioRoutes.home,
+              child: Text(
+                'Home'
+              )
+            ),
+            const PopupMenuItem<String>(
+              value: CharactfolioRoutes.aboutMe,
+              child: Text(
+                'About Me'
+              )
+            ),
+            const PopupMenuItem<String>(
+              value: CharactfolioRoutes.projects,
+              child: Text(
+                'Projects'
+              )
+            ),
+            const PopupMenuItem<String>(
+              value: CharactfolioRoutes.developer,
+              child: Text(
+                'Developer'
+                )
+              ),
+            ],
+          ).then((String? selectedRoute) {
+            if(selectedRoute != null &&
+            context.mounted &&
+            ModalRoute.of(context)?.settings.name != selectedRoute) {
+              Navigator.pushNamed(context, selectedRoute);
+            }
+          });
+        },
+      ),
+    ),
         actions: [
-          CharactfolioButton(
-            ch_imageBtton_normal: 'assets/images/developerBttonOff.png', 
-            ch_imageBtton_pressed: 'assets/images/developerBttonOn.png', 
-            width: 150.0,
-            height: 60.0, 
-            onPressed: (){})
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: CharactfolioButton(
+              ch_imageBtton_normal: 'assets/images/developerBttonOff.png', 
+              ch_imageBtton_pressed: 'assets/images/developerBttonOn.png',
+              width: 145.0,
+              height: 90.0, 
+              onPressed: (){
+                Navigator.pushNamed(context, CharactfolioRoutes.developer);
+              }
+            ),
+          )
         ],
       );
+    }
+    @override
+    Size get preferredSize => const Size.fromHeight(70.0);
   }
-  @override
-  Size get preferredSize => const Size.fromHeight(70.0);
-}
