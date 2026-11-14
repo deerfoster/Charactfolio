@@ -1,5 +1,3 @@
-import 'package:charactfolio_/widgets/url_finder.dart';
-import 'package:charactfolio_/widgets/w_image_anim.dart';
 import 'package:flutter/material.dart';
 import 'package:charactfolio_/exports/app_exports.dart';
 

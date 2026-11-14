@@ -26,10 +26,10 @@ class CharactfolioMenu extends StatelessWidget{
               ),
               Image.asset(
                 'assets/images/menuTitle.png',
-                width: 250.0,
+                width: 280.0,
               ),
               SizedBox(
-                height: 8.0,
+                height: 20.0,
               ),
               CharactfolioButton(
                 ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
@@ -42,7 +42,7 @@ class CharactfolioMenu extends StatelessWidget{
                 }
               ),
               SizedBox(
-                height: 1.5,
+                height: 15.0,
               ),
               CharactfolioButton(
                 ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
@@ -53,17 +53,6 @@ class CharactfolioMenu extends StatelessWidget{
                 onPressed: (){
                   Navigator.pushNamed(context, CharactfolioRoutes.projects);
                 }
-              ),
-              SizedBox(
-                height: 1.5,
-              ),
-              CharactfolioButton(
-                ch_imageBtton_normal: 'assets/images/bttonBackOff.png',
-                ch_imageBtton_pressed: 'assets/images/bttonBackOn.png', 
-                ch_labelBtton: 'Socials',
-                width: 230.0,
-                height: 60.0,  
-                onPressed: (){}
               ),
               SizedBox(
                 height: 1.5,

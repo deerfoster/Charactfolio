@@ -1,3 +1,4 @@
+import 'package:charactfolio_/screens/developer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:charactfolio_/exports/app_exports.dart';
 
@@ -11,6 +12,6 @@ class CharactfolioRoutes {
     home: (BuildContext context) => const HomeScreen(),
     aboutMe: (BuildContext context) => const AboutMeScreen(),
     projects: (BuildContext context) => const ProjectScreen(),
-    // developer: (BuildContext context) => const DeveloperScreen(),
+    developer: (BuildContext context) => const DeveloperScreen(),
   };
 }
