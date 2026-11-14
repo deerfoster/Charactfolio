@@ -13,9 +13,9 @@ class DeveloperScreen extends StatelessWidget {
       body:
       Stack(
         children: [
-          // const ChVideoPlayer(
-          //   videoPath: 'assets/videos/scaffoldBackground.mp4'
-          // ),
+          const ChVideoPlayer(
+            videoPath: 'assets/videos/scaffoldBackground.mp4'
+          ),
           Container(
             color: CharactfolioColorsApp.color5.withValues(alpha: 0.2),
           ),
